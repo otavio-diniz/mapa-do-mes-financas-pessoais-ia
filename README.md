@@ -101,6 +101,10 @@ A principal conclusão foi perceber que a IA pode acelerar bastante o processo d
 
 Projeto de estudo de **Otávio Diniz** no programa **Santander — Construa seu Primeiro App com IA**, na **DIO (Digital Innovation One)**. Referência acadêmica: [DIO — App de Finanças Pessoais com Vibe Coding](https://github.com/digitalinnovationone/dio-lab-vibe-coding-app-financas).
 
-Este é um **repositório independente**, não um fork. O contexto acadêmico não implica parceria, endosso, nota, aprovação ou certificação institucional.
+Este é um **repositório independente**, não um fork. O contexto acadêmico não implica parceria comercial, vínculo profissional ou endosso técnico do aplicativo.
+
+**Certificação institucional do projeto:** a DIO emitiu em **18/11/2026** o certificado de conclusão do desafio **“Criando um APP de Organização de Finanças Pessoais com Vibe Coding”**, código **BZXBBZQM**, com **2 horas**. Esse certificado comprova a conclusão do projeto específico na plataforma, **não** a conclusão automática de todo o bootcamp nem uma auditoria técnica independente. O PDF nominal original permanece preservado fora do repositório público.
+
+**Reconhecimento:** agradeço à [Digital Innovation One — @digitalinnovationone](https://github.com/digitalinnovationone) e ao [Santander Open Academy](https://www.santanderopenacademy.com/pt_br/index.html) pela oportunidade formativa e pelo contexto educacional deste desafio. A menção registra origem e reconhecimento; **não representa endosso técnico da implementação, parceria comercial ou vínculo profissional**. O [laboratório de referência da DIO](https://github.com/digitalinnovationone/dio-lab-vibe-coding-app-financas) é citado para atribuição pedagógica.
 
 © 2026 Otávio Diniz, ressalvados direitos de ferramentas e materiais de terceiros. A visibilidade pública **não constitui licença open source automática** nem autorização geral para reutilização comercial. Sugestões podem ser feitas pelos recursos públicos do GitHub, sem compartilhamento de segredos ou dados pessoais.
