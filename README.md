@@ -1,107 +1,106 @@
-# Mapa do Mês — Finanças Pessoais com IA
+# Mapa do Mês — Organização de Finanças Pessoais
 
-> **Conceito acadêmico em desenvolvimento | Santander — Construa seu Primeiro App com IA / DIO | M02 C06**
+**Protótipo educacional com registro por formulário, chat simulado e confirmação humana.**
 
-**Estado em 09/11/2026:** planejamento e especificação inicial. **Não há aplicativo implementado, demonstração funcional, testes executados ou entrega à DIO neste repositório.**
+O **Mapa do Mês** ajuda a visualizar receitas, despesas e saldo do mês, além de registrar e revisar movimentações fictícias. Foi desenvolvido como exercício de Vibe Coding no programa **Santander — Construa seu Primeiro App com IA**, da **DIO**, utilizando o **Lovable** na prototipação.
 
-## Resumo e proposta de valor
+> **Estado em 18/11/2026:** protótipo visual interativo experimentado pelo estudante. Este repositório apresenta conceito e evidências; **não contém código-fonte executável do aplicativo** nem disponibiliza demonstração pública hospedada.
 
-O **Mapa do Mês** é um conceito de aplicativo para ajudar pessoas físicas a registrar receitas e despesas cotidianas, conferir lançamentos e compreender o orçamento mensal.
+## Problema e público
 
-A proposta explora uma **experiência híbrida**: interação por linguagem natural com IA e cadastro/edição por formulário. O usuário mantém o controle sobre o que é efetivamente registrado.
+Pessoas iniciantes no controle financeiro podem ter dificuldades para registrar despesas frequentemente e entender o resultado do mês. O objetivo é simplificar a experiência de lançamento e apresentar indicadores básicos com clareza.
 
-**Proposta de valor em estudo:** registrar de maneira simples, conferir com segurança e entender o próprio mês. Os benefícios são hipóteses a validar, não resultados observados.
+**Público proposto:** pessoas físicas que desejam começar a acompanhar receitas e despesas. A utilidade para esse público é uma hipótese de produto, não resultado de pesquisa com usuários.
 
-## Problema e público-alvo
+## Solução e funcionalidades
 
-O registro financeiro repetitivo e a interpretação de relatórios complexos podem dificultar a continuidade do acompanhamento de gastos. A hipótese de produto é que entradas conversacionais, combinadas com formulários editáveis e um painel simples, reduzam essa fricção.
+O usuário pode registrar receita ou despesa por formulário ou por **chat simulado**. Antes de salvar, revisa o lançamento e decide confirmar ou cancelar. Registros confirmados alimentam histórico e painel.
 
-**Público principal proposto:** adultos que desejam começar ou aprimorar o acompanhamento de receitas e despesas pessoais. O projeto não é um sistema bancário, plataforma de crédito, aplicativo contábil para MEI ou serviço de investimentos.
+1. **Painel mensal:** receitas, despesas, saldo e categorias.
+2. **Chat simulado:** sugestões de lançamentos por regras de palavras-chave e solicitação de informação ausente.
+3. **Formulário:** cadastro direto de receitas e despesas.
+4. **Confirmação humana:** revisão, confirmação ou cancelamento antes de salvar.
+5. **Histórico:** consulta, edição e exclusão de movimentações.
 
-## Solução planejada
+A IA auxiliou na **criação do protótipo pelo Lovable**. O chat **dentro do aplicativo** funciona por regras, **não por um modelo de IA conversacional**.
 
-1. **Entrada conversacional:** interpretar frases como “Gastei R$ 48,90 no supermercado”.
-2. **Conferência humana:** sugerir tipo, valor, data e categoria e solicitar confirmação antes de salvar.
-3. **Entrada por formulário:** cadastrar, corrigir e excluir movimentações independentemente do chat.
-4. **Visão mensal:** exibir receitas, despesas, saldo e gastos por categoria.
-5. **Explicações simples:** descrever padrões observáveis nos dados confirmados, sem recomendar produtos financeiros.
+## Evidências do protótipo
 
-**Importante:** todos os itens acima são requisitos **planejados**. Nenhum está declarado como implementado ou testado.
+**[Abrir as quatro capturas reais (PDF)](assets/mapa-do-mes-evidencias-visuais.pdf)**
 
-## Exemplo conceitual — não executado
+O PDF mostra o painel antes do lançamento, a janela de revisão, o registro por chat simulado e o painel depois de uma despesa fictícia de R$ 50,00.
 
-**Mensagem de demonstração fictícia:** “Gastei R$ 48,90 no supermercado hoje”.
+| Indicador | Antes | Depois |
+| --- | ---: | ---: |
+| Receitas | R$ 3.650,00 | R$ 3.650,00 |
+| Despesas | R$ 1.635,30 | R$ 1.685,30 |
+| Saldo | R$ 2.014,70 | R$ 1.964,70 |
+| Categoria Mercado | R$ 236,30 | R$ 286,30 |
 
-**Comportamento esperado:** sugerir uma *despesa* de R$ 48,90, categoria *Alimentação*, data corrente e exigir confirmação/edição antes de salvar. O saldo só deve mudar depois da confirmação.
+O painel exibiu **despesas + R$ 50,00 e saldo − R$ 50,00**, coerentes com o lançamento confirmado. Essa comparação é evidência visual do cenário apresentado, não auditoria completa do código.
 
-O exemplo é um **critério de comportamento**, não um registro verdadeiro, print de execução ou teste aprovado.
+## PRD — especificação orientadora do protótipo
 
-## Requisitos e critérios de aceite propostos
+**Objetivo:** demonstrar uma experiência simples, em português brasileiro e valores em reais, para acompanhar receitas e despesas pessoais utilizando apenas dados fictícios.
 
-| ID | Comportamento verificável | Estado |
-| --- | --- | --- |
-| CA01 | Chat gera sugestão editável antes de registrar a transação | Planejado |
-| CA02 | Formulário e chat alimentam um histórico único | Planejado |
-| CA03 | Receita fictícia de R$ 2.000 menos despesa de R$ 48,90 produz saldo de R$ 1.951,10 | Planejado |
-| CA04 | Editar/excluir atualiza todos os totais correspondentes | Planejado |
-| CA05 | Mensagem sem valor suficiente solicita esclarecimento | Planejado |
-| CA06 | Painel mensal considera apenas transações confirmadas | Planejado |
+**Requisitos prioritários:**
 
-## Abordagem de desenvolvimento e validação
+- Registrar receita/despesa por chat simulado ou formulário.
+- Estruturar tipo, valor, descrição, categoria e data.
+- Solicitar revisão e confirmação explícita antes de alterar histórico ou saldo.
+- Apresentar totais mensais derivados de lançamentos confirmados.
+- Permitir consultar, editar e excluir movimentações, com recálculo coerente do painel.
 
-O desafio acadêmico enfatiza o **Product Requirements Document (PRD)**, o refinamento de prompts e o uso de IA como parceira de concepção. Estão previstas, sem execução comprovada até agora:
+**Limites:** sem integração bancária, Open Finance, autenticação, pagamentos, aconselhamento de investimentos ou movimentação de dinheiro. A simulação do chat deve estar identificada visualmente.
 
-- validação autoral do problema, público e escopo mínimo;
-- consolidação de um PRD final pelo participante;
-- experimentos documentados com Copilot e/ou Lovable;
-- revisão da saída da IA contra os critérios de aceite;
-- publicação de evidências reais e sanitizadas, somente quando existirem;
-- reflexão pessoal sobre o processo, escrita e validada pelo participante.
+**Proveniência do PRD e dos prompts:** esta seção consolida editorialmente os requisitos orientadores do experimento, revisados pelo estudante. **Não é transcrição literal integral da mensagem enviada ao Lovable.** Um comando real de interação visível nas capturas é **“Mercado 50,00”**. Não se atribui ao estudante texto literal que não tenha sido documentado como tal.
 
-**Stack atual:** apenas documentação em Markdown e versionamento GitHub. Copilot e Lovable são ferramentas **previstas para experimentação**, não integrações implementadas.
+## Tecnologia, funcionamento e acesso
 
-## Segurança, privacidade e limites
+- **Lovable:** ferramenta de criação e experimentação do protótipo com apoio de IA.
+- **Chat simulado:** interpretação por regras de palavras-chave.
+- **GitHub / Markdown / PDF:** documentação pública e evidências.
 
-- Usar exclusivamente exemplos e dados financeiros **fictícios/sintéticos** nas demonstrações.
-- Não pedir senhas, tokens, credenciais bancárias ou dados sensíveis.
-- Não conectar contas bancárias, processar pagamentos ou movimentar dinheiro.
-- Não inferir informações financeiras ausentes ou salvar sugestões sem consentimento.
-- Não apresentar explicações gerais como aconselhamento financeiro ou de investimentos.
-- Não declarar redução de esforço, adoção, precisão ou benefícios comerciais sem medição apropriada.
+Fluxo principal: **chat ou formulário → revisão → confirmação/cancelamento → histórico → painel mensal**.
 
-## Diferenciação no portfólio
+O protótipo declara persistência local no navegador, sem serviço bancário remoto ou autenticação nesta demonstração.
 
-Este exercício busca explorar a **experiência de registro financeiro pessoal**, sem replicar os objetivos de outros projetos de portfólio do autor:
+**Como consultar:** leia o fluxo descrito acima, [abra as evidências visuais](assets/mapa-do-mes-evidencias-visuais.pdf) e compare os indicadores antes e depois da confirmação.
 
-- [MILA — Copiloto Financeiro para MEI](https://github.com/otavio-diniz/mila-copiloto-financeiro-mei): organização de caixa empresarial, PF/PJ e apoio à comparação de decisões.
-- [Geo-Explorer — TrustPath AI](https://github.com/otavio-diniz/geo-explorer-trustpath-ai): aprendizagem em IA orientada por evidências e supervisão humana.
-- [CreditExplain BR](https://github.com/otavio-diniz/creditexplain-br): pesquisa documental sobre crédito responsável e explicabilidade.
-- [Assistente de Investimentos com RPA e n8n](https://github.com/otavio-diniz/dio-lab-assistente-investimentos-rpa-n8n): orquestração local de automação com bases fictícias.
+**Como executar a partir de clone:** não se aplica a esta versão documental, pois ela não distribui código executável. Não há comandos de instalação, serviços ou versões de runtime a inventar. O editor autenticado do Lovable não é apresentado como URL pública de demonstração.
 
-Há **conexões conceituais**, não integração técnica comprovada entre os projetos.
+## Testes e limites da validação
 
-## Contexto acadêmico e créditos
+O estudante relatou **sete procedimentos manuais positivos**:
 
-Este projeto foi iniciado no contexto do desafio **“App de Organização de Finanças Pessoais com Vibe Coding”**, do programa **Santander — Construa seu Primeiro App com IA**, na **DIO (Digital Innovation One)**.
+- Sugestão do chat sem salvamento automático.
+- Confirmação de despesa e atualização do painel.
+- Cadastro de receita por formulário e atualização do painel.
+- Edição de despesa e recálculo do saldo.
+- Mensagem sem valor solicitando complemento.
+- Cancelamento sem registrar movimentação.
+- Exclusão e conferência do estado após recarga.
 
-Referência acadêmica original: [digitalinnovationone/dio-lab-vibe-coding-app-financas](https://github.com/digitalinnovationone/dio-lab-vibe-coding-app-financas).
+As quatro capturas permitem verificar visualmente a consistência aritmética do lançamento fictício de R$ 50,00. Não comprovam todos os cenários possíveis.
 
-O repositório é independente e não reproduz código ou materiais de terceiros. O reconhecimento à DIO e ao Santander não implica parceria, endosso técnico, nota, aprovação ou conclusão institucional.
+A ferramenta também informou resultados de testes próprios, mas sua suíte **não foi auditada independentemente**. Não são declarados testes de carga, segurança, compatibilidade universal, integração bancária ou disponibilidade pública contínua.
 
-## Autoria, direitos e participação
+Todos os dados da demonstração são **fictícios**. O aplicativo não deve receber credenciais ou dados financeiros sensíveis, nem realiza pagamentos. Armazenamento local não equivale a sincronização entre dispositivos.
 
-**Autoria do projeto:** © 2026 Otávio Diniz, respeitados direitos de terceiros.
+## Aprendizados — reflexão do estudante
 
-Este repositório é público para acompanhamento acadêmico, apresentação de portfólio e recebimento de comentários. **A publicidade não constitui uma licença open source** nem implica autorização genérica para exploração comercial ou redistribuição de conteúdo autoral. Licenciamento definitivo e eventuais contribuições serão definidos em etapa própria, após revisão de direitos e proveniência.
+Ao transformar a ideia do Mapa do Mês em um protótipo com IA, aprendi que uma ideia aparentemente simples precisa ser bem estruturada para se tornar uma solução realmente útil. Foi necessário pensar no problema, no público que utilizaria a ferramenta, nas informações mais importantes e em como apresentá-las de maneira clara e prática.
 
-Sugestões e feedback podem ser apresentados pelas funcionalidades públicas do GitHub. Não compartilhe dados pessoais, segredos ou credenciais.
+O que mais chamou minha atenção foi a rapidez com que a inteligência artificial conseguiu ajudar a transformar uma necessidade em algo mais concreto. Ao mesmo tempo, percebi que a IA não substitui a análise humana: é necessário revisar as sugestões, testar o protótipo e ajustar as instruções até que o resultado esteja realmente alinhado ao objetivo.
 
-## Histórico e próximas etapas
+Também aprendi que a criação de um protótipo é um processo de melhoria contínua. Testar, identificar falhas e fazer novos ajustes faz parte do desenvolvimento. No caso do Mapa do Mês, a IA ajudou não apenas na construção da solução, mas também a enxergar novas possibilidades de organização, automação e apresentação das informações.
 
-- **09/11/2026 — Conceito:** definido o nome de trabalho *Mapa do Mês*, a abordagem híbrida e o foco em finanças pessoais.
-- **09/11/2026 — Preparação pública:** README inicial com problema, hipótese de solução, escopo provisório, limitações e vínculos conceituais com o portfólio.
-- **Próxima etapa:** discutir e validar colaborativamente o PRD, antes de classificar requisitos como definitivos.
-- **Após validação:** registrar experiências reais de prompting, resultados observados e reflexões pessoais.
-- **Entrega à DIO:** ação futura e distinta, sujeita à realização do trabalho pelo estudante.
+A principal conclusão foi perceber que a IA pode acelerar bastante o processo de transformar uma ideia em uma solução prática, desde que seja utilizada com objetivos claros, bons comandos e validação humana.
 
-Nenhuma execução, avaliação ou entrega institucional é inferida da abertura deste repositório.
+## Formação, autoria e direitos
+
+Projeto de estudo de **Otávio Diniz** no programa **Santander — Construa seu Primeiro App com IA**, na **DIO (Digital Innovation One)**. Referência acadêmica: [DIO — App de Finanças Pessoais com Vibe Coding](https://github.com/digitalinnovationone/dio-lab-vibe-coding-app-financas).
+
+Este é um **repositório independente**, não um fork. O contexto acadêmico não implica parceria, endosso, nota, aprovação ou certificação institucional.
+
+© 2026 Otávio Diniz, ressalvados direitos de ferramentas e materiais de terceiros. A visibilidade pública **não constitui licença open source automática** nem autorização geral para reutilização comercial. Sugestões podem ser feitas pelos recursos públicos do GitHub, sem compartilhamento de segredos ou dados pessoais.
